@@ -1,0 +1,231 @@
+body {
+   margin: 0px;
+  }
+  
+  html,
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+  .buttonLogin{
+    position: absolute;
+   width: 346px;
+   height: 67px;
+   left: 60px;
+   top: 481px;
+    background-color: rgb(203, 153, 100);
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .buttonRegister{
+   position: absolute;
+   width: 346px;
+   height: 67px;
+   left: 60px;
+   top: 581px;
+    background-color: rgb(203, 153, 100);
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .button{
+    position: absolute;
+    width: 146px;
+    height: 37px;
+    left: 160px;
+    top: 600px;
+     background-color: rgb(203, 153, 100);
+     color: black;
+     padding: 5px 12px;
+     text-align: center;
+     font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     border-radius: 8px;
+     font-size: 18px;
+     }
+
+     hr {
+      color: rgb(238, 232, 232);
+    }
+   
+    .buttonBack{
+    position: absolute;
+    width: 146px;
+    height: 37px;
+    left: 160px;
+    top: 750px;
+     background-color: rgb(203, 153, 100);
+     color: black;
+     padding: 5px 12px;
+     text-align: center;
+     font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     border-radius: 8px;
+     font-size: 18px;
+   }
+   
+   .buttonVincule{
+    position: absolute;
+    width: 208px;
+    height: 37px;
+    left: 130px;
+    top: 670px;
+     background-color: rgb(236, 232, 227);
+     color: black;
+     padding: 5px 12px;
+     text-align: center;
+     font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     border-radius: 10px;
+     font-size: 18px;
+      }
+    
+    
+    .register{
+    position: absolute;
+    width: 306px;
+    height: 81px;
+    left: 110px;
+    top: 150px;
+
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 88px;
+    
+    color: black;    
+  }
+  .descriptionRegister{
+    position: absolute;
+    width: 333px;
+    height: 70px;
+    left: 64px;
+    top: 290px;
+      
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    
+    color: black;
+    }
+  
+  .postalk{
+    position: absolute;
+    width: 306px;
+    height: 81px;
+    left: 110px;
+    top: 185px;
+
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 88px;
+    
+    color: black;    
+  }
+
+  .description{
+position: absolute;
+width: 333px;
+height: 70px;
+left: 64px;
+top: 346px;
+  
+font-family: 'Paytone One';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 35px;
+text-align: center;
+
+color: black;
+}
+
+.inputEmail{
+  position: absolute;
+  text-align: center;
+width: 270px;
+height: 29px;
+left: 100px;
+top: 390px;
+
+background: #D9D9D9;
+border: 2px solid #D9D9D9;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+ }
+.inputPass{
+  position: absolute;
+  text-align: center;
+width: 270px;
+height: 29px;
+left: 100px;
+top: 450px;
+
+
+background: #D9D9D9;
+border: 2px solid #D9D9D9;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+ }
+
+ .inputConfirm{
+  position: absolute;
+  text-align: center;
+width: 270px;
+height: 29px;
+left: 100px;
+top: 520px;
+
+background: #D9D9D9;
+border: 2px solid #D9D9D9;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+ }
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#root{
+    margin: 0;
+    padding: 0;
+    width: 100;
+    height: 100;
+}
+
+
+.container-welcome {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./imagen/Fondo.png');
+    background-size: auto;
+}
+
+.container-Create{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagen/fondo_app.png');
+  background-size: auto;
+}
+
+
