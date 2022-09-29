@@ -75,19 +75,13 @@ body {
      font-size: 18px;
    }
    
-   .buttonVincule{
+   .buttongoogler{
     position: absolute;
     width: 208px;
     height: 37px;
     left: 130px;
     top: 670px;
-     background-color: rgb(236, 232, 227);
-     color: black;
-     padding: 5px 12px;
-     text-align: center;
-     font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     border-radius: 10px;
-     font-size: 18px;
+   
       }
     
     
