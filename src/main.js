@@ -15,6 +15,7 @@ export const onNavigate = (pathname) => {
     pathname,
     window.location.origin + pathname,
   );
+
   root.removeChild(root.firstChild)
   root.appendChild(routes[pathname]());
 };
@@ -27,3 +28,4 @@ window.onpopstate = () => {
 };
 
 root.appendChild(component());
+
