@@ -1,3 +1,4 @@
+
 /* eslint-disable max-len */
 import { onNavigate } from '../main.js';
 
@@ -51,4 +52,4 @@ export const Register = () => {
   div.append(title, inputEmail, inputPass, inputConfirm, button, buttonBack, descriptionRegister, imageGoogle);
 
   return div;
-};
+
