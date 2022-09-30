@@ -1,7 +1,6 @@
 import { onNavigate } from '../main.js';
 
 export const Welcome = () => {
-
   const div = document.createElement('div');
   const title = document.createElement('h2');
   const description = document.createElement('h3');
@@ -11,7 +10,7 @@ export const Welcome = () => {
 
   buttonLogin.textContent = 'Login';
   buttonLogin.classList.add('buttonLogin');
-  buttonRegister.textContent = 'Sign Up';
+  buttonRegister.textContent = 'Registrate';
   title.textContent = 'Postalk';
   buttonRegister.classList.add('buttonRegister');
   title.classList = ('postalk');
@@ -29,5 +28,3 @@ export const Welcome = () => {
 
   return div;
 };
-
-

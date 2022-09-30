@@ -30,14 +30,35 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
+.title {
+    position: absolute;
+    width: 118px;
+    height: 29.77px;
+    left: 278px;
+    top: 687px;
+    text-align: center;
+    background-color: rgb(203, 153, 100);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    font-size: 5px;
+    font-family: 'Poppins';
 
-.buttonRegistrer {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1px;
+}
+
+ .buttonRegistrer {
 
     position: absolute;
     width: 346.48px;
     height: 67.5px;
     left: 68px;
-    top: 581px;
+    top: 681px;
+
     background-color: rgb(203, 153, 100);
     color: rgb(0, 0, 0);
     padding: 15px 32px;
@@ -46,6 +67,8 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
+
+
 
 .postalk {
 
@@ -190,7 +213,7 @@ body {
     position: absolute;
     width: 194px;
     height: 52px;
-    left: 166px;
+    left: 125px;
     top: 687px;
     background-color: rgb(203, 153, 100);
     color: rgb(0, 0, 0);
@@ -452,13 +475,33 @@ body {
     font-size: 13px;
     line-height: 1px;
 }
+.button {
+    position: absolute;
+    width: 218px;
+    height: 29.77px;
+    left: 120px;
+    top: 587px;
+    text-align: center;
+    background-color: rgb(203, 153, 100);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+    font-size: 5px;
+    font-family: 'Poppins';
 
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1px;
+
+}
 
 .buttongoogler {
     position: absolute;
     width: 208px;
     height: 46px;
-    left: 110px;
+    left: 120px;
     top: 630px;
 
 }

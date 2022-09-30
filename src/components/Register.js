@@ -1,10 +1,9 @@
-
 /* eslint-disable max-len */
 import { onNavigate } from '../main.js';
 
 export const Register = () => {
   const div = document.createElement('div');
-  const title = document.createElement('h2');
+  const titleRegister = document.createElement('h2');
   const descriptionRegister = document.createElement('h3');
   const button = document.createElement('button');
   const buttonBack = document.createElement('button');
@@ -22,8 +21,8 @@ export const Register = () => {
   buttonVincule.classList = ('buttonVincule');
   buttonBack.classList = ('buttonBack');
   button.classList = ('button');
-  title.textContent = 'Postalk';
-  title.classList = ('register');
+  titleRegister.textContent = 'Postalk';
+  titleRegister.classList = ('register');
   inputEmail.textContent = ('input');
   inputEmail.classList = ('inputEmail');
   inputPass.textContent = ('input');
@@ -49,7 +48,6 @@ export const Register = () => {
 
   });
 
-  div.append(title, inputEmail, inputPass, inputConfirm, button, buttonBack, descriptionRegister, imageGoogle);
-
+  div.append(titleRegister, inputEmail, inputPass, inputConfirm, button, buttonBack, descriptionRegister, imageGoogle);
   return div;
-
+};
