@@ -423,14 +423,14 @@ body {
 }
 
 .exit{
-    width: 36px;
-    height: 36px;
-    position: fixed;
-    right: 20px;
-    
+    margin-top: 30px;
+    margin-left: 420px;
+    width: 9%;
+    height: 5%;
+
     background-image:
         url('./imagen/exit.png');
-    background-size: 105%;
+    background-size: 100%;
 }
 
 .buttonnuevacuenta {
