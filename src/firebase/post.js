@@ -5,7 +5,7 @@ const db = getFirestore(app);
 
 export const savePost = async () => {
   const docRef = await addDoc(collection(db, 'post'), {
-    mensaje: 'Hola hoy desayune quesadilla',
+    mensaje: 'Hola hoy desayune tamales',
   });
   console.log('Document written with ID: ', docRef.id);
 };
