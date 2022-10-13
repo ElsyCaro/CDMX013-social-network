@@ -1,6 +1,6 @@
 import { logOut } from '../firebase/auth.js';
 import { MakePost } from './MakePost.js';
-import { getPost, deletePost } from '../firebase/post.js';
+import { getPost, deletePost, editPost, } from '../firebase/post.js';
 
 export const Wall = () => {
   const div = document.createElement('div');
@@ -29,7 +29,8 @@ export const Wall = () => {
     recorre.forEach((doc) => {
       console.log(doc.id, '=>', doc.data());
       const post = doc.data();
-      const contenidoPost = document.createElement('p');
+      const contenidoPost = document.createElement('textarea');
+      contenidoPost.setAttribute ('readonly', true);
       contenidoPost.textContent = post.mensaje;
       contenidoPost.classList = 'contenidoPost';
       containerPosts.classList = 'cajadecontenido'; // div
@@ -43,8 +44,15 @@ export const Wall = () => {
         await deletePost(doc.id);
       });
       containerPosts.append(contenidoPost, buttonDelete);
+
+      const buttonEdit = document.createElement ('button');
+      buttonEdit.textContent = 'editar comentario';
+      buttonEdit.classList = 'buttonEdit';
+      buttonEdit.addEventListener ('click', () => {
+        contenidoPost.removeAttribute ('readonly');
+      })
     });
-  });
+  };
 
   // funcion que recibe el snapshot ( como argumento una funcion que s encargue de tomar snapshot y utilizarla )
   return div;

@@ -1,11 +1,19 @@
 import {
-  collection, onSnapshot, addDoc, getFirestore, deleteDoc, doc,
+  collection,
+  onSnapshot,
+  addDoc,
+  getFirestore,
+  deleteDoc,
+  doc,
+  updateDoc,
 } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
 
 import {
-  getAuth, onAuthStateChanged,
+  getAuth,
+  onAuthStateChanged,
 } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 
+import { async } from 'regenerator-runtime';
 import { app } from './config.js';
 
 const auth = getAuth(app);
@@ -32,14 +40,16 @@ export const savePost = async (textPost) => {
 // firestore es una base de datos no relacional
 //
 export const getPost = (callback) => {
-  onSnapshot(
-    collection(db, 'post'),
-    callback,
-  );
+  onSnapshot(collection(db, 'post'), callback);
 };
 
 export const deletePost = async (id) => {
   await deleteDoc(doc(db, 'post', id));
+};
+
+export const editPost = async (id, post) => {
+  const postRef = (doc(db, 'post', id));
+  await updateDoc(postRef, post);
 };
 // todo lo del CRUD aquí
 
