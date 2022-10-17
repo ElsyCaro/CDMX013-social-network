@@ -13,7 +13,7 @@ import {
   onAuthStateChanged,
 } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 
-import { async } from 'regenerator-runtime';
+
 import { app } from './config.js';
 
 const auth = getAuth(app);
@@ -54,3 +54,10 @@ export const editPost = async (id, post) => {
 // todo lo del CRUD aquí
 
 // export const getPost = (callback) => onSnapshot (collection(db,'post'), callback);
+
+// renderizarlo como p
+// pero al dar click se pueda editar
+
+// input activra y desactivar
+// cuando le haga click encima
+// activate habilitar y desabilitar
