@@ -1,6 +1,8 @@
-import { logOut } from '../firebase/auth.js';
+import { logOut, auth } from '../firebase/auth.js';
 import { MakePost } from './MakePost.js';
-import { getPost, deletePost, editPost } from '../firebase/post.js';
+import {
+  getPost, deletePost, editPost,
+} from '../firebase/post.js';
 
 export const Wall = () => {
   const div = document.createElement('div');
@@ -25,7 +27,6 @@ export const Wall = () => {
   });
 
   getPost((recorre) => {
-    console.log('Post nuevo');
     containerPosts.innerHTML = '';
     recorre.forEach((doc) => {
       console.log(doc.id, '=>', doc.data());
@@ -42,45 +43,55 @@ export const Wall = () => {
       console.log(post);
 
       const buttonDelete = document.createElement('button');
-      buttonDelete.textContent = 'Borrar';
       buttonDelete.classList = 'buttonDelete';
-      buttonDelete.addEventListener('click', async () => {
-        await deletePost(doc.id);
-      });
+
       const buttonEdit = document.createElement('button');
-      buttonEdit.textContent = 'editar comentario';
+
       buttonEdit.classList = 'buttonEdit';
+
       buttonEdit.addEventListener('click', () => {
         contenidoPost.removeAttribute('readonly');
         buttonEdit.style.display = 'none';
 
         const buttonSave = document.createElement('button');
-        buttonSave.textContent = 'guardar';
+
+        buttonSave.classList = 'buttonSave';
+
         buttonSave.addEventListener('click', () => {
           editPost(doc.id, { mensaje: contenidoPost.value });
         });
-        divPost.append(buttonSave);
+        const buttonCancel = document.createElement('button');
 
-        // editPost(doc.id, { mensaje: 'XD' });
+        buttonCancel.classList = 'buttonCancel';
+
+        buttonCancel.addEventListener('click', (e) => {
+          e.stopImmediatePropagation();
+          buttonSave.style.display = 'none';
+          buttonCancel.style.display = 'none';
+          buttonEdit.style.display = 'inline';
+          contenidoPost.setAttribute('readonly', true);
+        });
+
+        // al dar editar y cancelar se puede seguir comentando
+
+        divPost.append(buttonSave, buttonCancel);
       });
 
-      divPost.append(contenidoPost, buttonDelete, buttonEdit);
+      divPost.append(contenidoPost);
+
+      if (auth.currentUser.uid === post.uid) {
+        divPost.append(buttonDelete);
+        divPost.append(buttonEdit);
+        buttonDelete.addEventListener('click', async () => {
+          await deletePost(doc.id);
+        });
+      }
+      // boton cancelar editar
     });
   });
 
-  // funcion que recibe el snapshot ( como argumento una funcion que s encargue de tomar snapshot y utilizarla )
   return div;
 };
-
-// como pintar comentario 2 vias: hacer un nuevo elemento y eso vincularlo con la funcion, hacer un nuevo div
-// hacer una condicional para que asocie el usuario con el mensaje y que aparezca arriba (fecha, manera ordenada)
-//
-
-// activar y desactivar input
-// timespamt
-//boton cancelar para editar post
-
-
-//borrar y editar solamente pueda hacerlo el usuario
-//boton cancelar edición
-//si da tiempo agregar más css
+// borrar y editar solamente pueda hacerlo el usuario
+// boton cancelar edición
+// si da tiempo agregar más css
