@@ -5,7 +5,7 @@ import {
 import { onNavigate } from '../main.js';
 import { app } from './config.js';
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 export const guardarUssuario = (email, password) => createUserWithEmailAndPassword(auth, email, password);
 

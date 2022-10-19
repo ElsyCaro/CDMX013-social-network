@@ -13,10 +13,9 @@ import {
   onAuthStateChanged,
 } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 
-
 import { app } from './config.js';
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 const db = getFirestore(app);
 let uid = '';
@@ -34,6 +33,7 @@ export const savePost = async (textPost) => {
   const docRef = await addDoc(collection(db, 'post'), {
     mensaje: textPost,
     uid,
+
   });
   // console.log('Document written with ID: ', docRef.id);
 };
